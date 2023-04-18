@@ -179,9 +179,9 @@ static bool detectPulse(float sensor_value)
 
             // This method sometimes glitches, it's better to go through whole moving average everytime
             // IT's a neat idea to optimize the amount of work for moving avg. but while placing, removing finger it can screw up
-            // valuesBPMSum -= valuesBPM[bpmIndex];
-            // valuesBPM[bpmIndex] = rawBPM;
-            // valuesBPMSum += valuesBPM[bpmIndex];
+            valuesBPMSum -= valuesBPM[bpmIndex];
+            valuesBPM[bpmIndex] = rawBPM;
+            valuesBPMSum += valuesBPM[bpmIndex];
 
             valuesBPM[bpmIndex] = rawBPM;
             valuesBPMSum = 0;

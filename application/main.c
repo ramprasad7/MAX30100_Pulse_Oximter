@@ -140,9 +140,9 @@ int main()
             temp = read_buffer[0];
             frac_temp = (float)read_buffer[1] * (0.0625);
             final_temp = frac_temp + temp;
-            printf("Temp(int) = %d\nTemp(frac) = %.3f\nFinal Temperature = %.3f\n", temp, frac_temp, final_temp);
             usleep(1000);
         }
+        printf("Temp(int) = %d\nTemp(frac) = %.3f\nFinal Temperature = %.3f\n", temp, frac_temp, final_temp);
         break;
     }
     default:
